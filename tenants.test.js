@@ -1,9 +1,19 @@
 const axios = require("axios");
 
 const API_BASE = "https://cnt.liara.run";
-const AUTH_TOKEN =
-  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YjZkNWM3ODQ0MDhjNmJmNTYyOThiMiIsImRhdGUiOiIyMDI1LTA5LTA1VDA2OjEyOjUzLjU0M1oiLCJpYXQiOjE3NTcwNTI3NzN9.dmQv28TFU2UE-RoyfHFc0vcE6WHWYi_oqe1Ib8_O8pc";
+const fs = require("fs");
+const TOKEN_FILE = "token.json";
 
+function loadToken() {
+  if (fs.existsSync(TOKEN_FILE)) {
+    const data = fs.readFileSync(TOKEN_FILE);
+    return JSON.parse(data).token;
+  }
+  throw new Error("❌ No token found! Run auth.test.js first to generate token.");
+}
+
+
+const AUTH_TOKEN = `Bearer ${loadToken()}`;
 const client = axios.create({
   baseURL: API_BASE,
   headers: {

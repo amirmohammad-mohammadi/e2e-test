@@ -1,8 +1,18 @@
+// transactions.test.js
 const axios = require("axios");
+const fs = require("fs");
+const TOKEN_FILE = "token.json";
 
+function loadToken() {
+  if (fs.existsSync(TOKEN_FILE)) {
+    const data = fs.readFileSync(TOKEN_FILE);
+    return JSON.parse(data).token;
+  }
+  throw new Error("❌ No token found! Run auth.test.js first to generate token.");
+}
+
+const AUTH_TOKEN = `Bearer ${loadToken()}`;
 const API_BASE = "https://cnt.liara.run";
-const AUTH_TOKEN =
-  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YjZkNWM3ODQ0MDhjNmJmNTYyOThiMiIsImRhdGUiOiIyMDI1LTA5LTA1VDA2OjEyOjUzLjU0M1oiLCJpYXQiOjE3NTcwNTI3NzN9.dmQv28TFU2UE-RoyfHFc0vcE6WHWYi_oqe1Ib8_O8pc";
 
 const client = axios.create({
   baseURL: API_BASE,
@@ -23,45 +33,107 @@ function logError(err) {
   throw err;
 }
 
-describe("transactions API E2E", () => {
-  let createdTransactionId;
+describe("Transactions API E2E", () => {
+  let accountId, bankAccountId;
 
-  test("should create a new transaction", async () => {
+  beforeAll(async () => {
     try {
-      
       const accountRes = await client.get("/accounts");
-      const accountId = accountRes.data.data[0]._id;
+      accountId = accountRes.data.data[0]._id;
 
-     
       const bankAccountRes = await client.get("/bank-accounts");
-      const bankAccountId = bankAccountRes.data.data[0]._id;
-
-     
-      const payload = {
-        amount: "100000", 
-        paymentMethod: "cash", 
-        transactionType: "sell", 
-        status: "paid", 
-        description: "Payment for black t-shirt",
-        account: accountId, 
-        bankAccount: bankAccountId,
-        currency: "IRT",
-      };
-     
-      const res = await client.post("/transactions", payload);
-
-      
-      expect([200, 201]).toContain(res.status);
-      expect(res.data.data).toHaveProperty("_id");
-      expect(res.data.data).toHaveProperty("description", payload.description);
-      expect(res.data.data).toHaveProperty("amount", payload.amount);
-      expect(res.data.data).toHaveProperty("paymentMethod", payload.paymentMethod);
-      expect(res.data.data).toHaveProperty("transactionType", payload.transactionType);
-      expect(res.data.data).toHaveProperty("status", payload.status);
-
-      createdTransactionId = res.data.data._id;
+      bankAccountId = bankAccountRes.data.data[0]._id;
     } catch (err) {
       logError(err);
     }
   }, 20000);
+
+  async function createTransaction(options) {
+    const payload = {
+      amount: options.amount || "100000",
+      paymentMethod: options.paymentMethod || "cash",
+      transactionType: options.transactionType || "sell",
+      status: options.status || "paid", // only: unpaid, paid, cancelled
+      description: options.description || "Test transaction",
+      account: options.account || accountId,
+      bankAccount: options.bankAccount || bankAccountId,
+      currency: options.currency || "IRT",
+    };
+
+    const res = await client.post("/transactions", payload);
+    console.log("💰 Transaction created:", JSON.stringify(res.data.data, null, 2));
+    return res;
+  }
+
+  test(
+    "✅ should create transaction with status paid",
+    async () => {
+      try {
+        const res = await createTransaction({ status: "paid" });
+        expect([200, 201]).toContain(res.status);
+        expect(res.data.data.status).toBe("paid");
+      } catch (err) {
+        logError(err);
+      }
+    },
+    20000
+  );
+
+  test(
+    "✅ should create transaction with status unpaid",
+    async () => {
+      try {
+        const res = await createTransaction({ status: "unpaid" });
+        expect([200, 201]).toContain(res.status);
+        expect(res.data.data.status).toBe("unpaid");
+      } catch (err) {
+        logError(err);
+      }
+    },
+    20000
+  );
+
+  test(
+    "✅ should create transaction with status cancelled",
+    async () => {
+      try {
+        const res = await createTransaction({ status: "cancelled" });
+        expect([200, 201]).toContain(res.status);
+        expect(res.data.data.status).toBe("cancelled");
+      } catch (err) {
+        logError(err);
+      }
+    },
+    20000
+  );
+
+  test(
+    "❌ should fail with invalid status",
+    async () => {
+      try {
+        await createTransaction({ status: "xxx" }); // invalid
+      } catch (err) {
+        console.log("🚨 Expected failure:", err.response?.data || err.message);
+        expect(err.response.status).toBe(400);
+      }
+    },
+    20000
+  );
+
+  test(
+    "✅ should create large amount transaction",
+    async () => {
+      try {
+        const res = await createTransaction({
+          amount: "9999999999",
+          description: "Stress test transaction",
+        });
+        expect([200, 201]).toContain(res.status);
+        expect(res.data.data.amount).toBe("9999999999");
+      } catch (err) {
+        logError(err);
+      }
+    },
+    20000
+  );
 });

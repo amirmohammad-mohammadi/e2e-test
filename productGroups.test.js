@@ -1,19 +1,24 @@
 const axios = require("axios");
-
+const fs = require("fs");
+const path = require("path");
 
 const API_BASE = "https://cnt.liara.run";
-const AUTH_TOKEN =
-  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YjZkNWM3ODQ0MDhjNmJmNTYyOThiMiIsImRhdGUiOiIyMDI1LTA5LTA1VDA2OjEyOjUzLjU0M1oiLCJpYXQiOjE3NTcwNTI3NzN9.dmQv28TFU2UE-RoyfHFc0vcE6WHWYi_oqe1Ib8_O8pc";
+
+// Load token from token.json
+const tokenPath = path.join(__dirname, "token.json");
+if (!fs.existsSync(tokenPath)) {
+  throw new Error("❌ token.json not found! Run auth.test.js first.");
+}
+const { token } = JSON.parse(fs.readFileSync(tokenPath, "utf-8"));
 
 const client = axios.create({
   baseURL: API_BASE,
   headers: {
     Accept: "application/json",
-    Authorization: AUTH_TOKEN,
+    Authorization: `Bearer ${token}`,
     "Content-Type": "application/json",
   },
 });
-
 
 function logError(err) {
   if (err.response) {
@@ -22,7 +27,7 @@ function logError(err) {
   } else {
     console.error("ERROR:", err.message);
   }
-  throw err; 
+  throw err;
 }
 
 describe("Product Groups API E2E", () => {
@@ -33,17 +38,18 @@ describe("Product Groups API E2E", () => {
     async () => {
       try {
         const payload = {
-          name: `test-${Date.now()}`, 
+          name: `test-${Date.now()}`,
           description: "test",
         };
 
         const res = await client.post("/product-groups", payload);
 
-
         expect([200, 201]).toContain(res.status);
         expect(res.data.data).toHaveProperty("_id");
         expect(res.data.data).toHaveProperty("name", payload.name);
+
         createdGroupId = res.data.data._id;
+        console.log("✅ ProductGroup created:", createdGroupId);
       } catch (err) {
         logError(err);
       }
