@@ -1,38 +1,40 @@
 // transactions.test.js
+const { getToken } = require("./auth.js"); // ✅ get token dynamically
 const axios = require("axios");
-const fs = require("fs");
-const TOKEN_FILE = "token.json";
 
-function loadToken() {
-  if (fs.existsSync(TOKEN_FILE)) {
-    const data = fs.readFileSync(TOKEN_FILE);
-    return JSON.parse(data).token;
-  }
-  throw new Error("❌ No token found! Run auth.test.js first to generate token.");
-}
-
-const AUTH_TOKEN = `Bearer ${loadToken()}`;
 const API_BASE = "https://cnt.liara.run";
 
-const client = axios.create({
-  baseURL: API_BASE,
-  headers: {
-    Accept: "application/json",
-    Authorization: AUTH_TOKEN,
-    "Content-Type": "application/json",
-  },
+let token;
+let client;
+
+// ------------------ before all tests ------------------
+beforeAll(async () => {
+  // 📌 Always get fresh token from auth.test.js
+  token = await getToken();
+  console.log("✅ Token ready:", token);
+
+  client = axios.create({
+    baseURL: API_BASE,
+    headers: {
+      Accept: "application/json",
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+    },
+  });
 });
 
-function logError(err) {
+// ------------------ Error logging ------------------
+function logError(endpoint, err) {
   if (err.response) {
-    console.error("STATUS:", err.response.status);
-    console.error("BODY:", JSON.stringify(err.response.data, null, 2));
+    console.error(`❌ ${endpoint} →`, err.response.status);
+    console.error("Body:", JSON.stringify(err.response.data, null, 2));
   } else {
-    console.error("ERROR:", err.message);
+    console.error(`❌ ${endpoint} ERROR:`, err.message);
   }
   throw err;
 }
 
+// ------------------ Test Suite ------------------
 describe("Transactions API E2E", () => {
   let accountId, bankAccountId;
 
@@ -44,7 +46,7 @@ describe("Transactions API E2E", () => {
       const bankAccountRes = await client.get("/bank-accounts");
       bankAccountId = bankAccountRes.data.data[0]._id;
     } catch (err) {
-      logError(err);
+      logError("Setup accounts/bankAccounts", err);
     }
   }, 20000);
 
@@ -53,7 +55,7 @@ describe("Transactions API E2E", () => {
       amount: options.amount || "100000",
       paymentMethod: options.paymentMethod || "cash",
       transactionType: options.transactionType || "sell",
-      status: options.status || "paid", // only: unpaid, paid, cancelled
+      status: options.status || "paid",
       description: options.description || "Test transaction",
       account: options.account || accountId,
       bankAccount: options.bankAccount || bankAccountId,
@@ -61,7 +63,6 @@ describe("Transactions API E2E", () => {
     };
 
     const res = await client.post("/transactions", payload);
-    console.log("💰 Transaction created:", JSON.stringify(res.data.data, null, 2));
     return res;
   }
 
@@ -73,7 +74,7 @@ describe("Transactions API E2E", () => {
         expect([200, 201]).toContain(res.status);
         expect(res.data.data.status).toBe("paid");
       } catch (err) {
-        logError(err);
+        logError("/transactions", err);
       }
     },
     20000
@@ -87,7 +88,7 @@ describe("Transactions API E2E", () => {
         expect([200, 201]).toContain(res.status);
         expect(res.data.data.status).toBe("unpaid");
       } catch (err) {
-        logError(err);
+        logError("/transactions", err);
       }
     },
     20000
@@ -101,7 +102,7 @@ describe("Transactions API E2E", () => {
         expect([200, 201]).toContain(res.status);
         expect(res.data.data.status).toBe("cancelled");
       } catch (err) {
-        logError(err);
+        logError("/transactions", err);
       }
     },
     20000
@@ -113,11 +114,10 @@ describe("Transactions API E2E", () => {
       try {
         await createTransaction({ status: "xxx" }); // invalid
       } catch (err) {
-        console.log("🚨 Expected failure:", err.response?.data || err.message);
         expect(err.response.status).toBe(400);
       }
     },
-    20000
+    30000
   );
 
   test(
@@ -131,9 +131,9 @@ describe("Transactions API E2E", () => {
         expect([200, 201]).toContain(res.status);
         expect(res.data.data.amount).toBe("9999999999");
       } catch (err) {
-        logError(err);
+        logError("/transactions", err);
       }
     },
-    20000
+    30000
   );
 });

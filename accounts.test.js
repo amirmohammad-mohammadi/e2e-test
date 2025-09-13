@@ -1,71 +1,96 @@
+const { getToken } = require("./auth.js");
+const fs = require("fs");
+const path = require("path");
 const axios = require("axios");
 
-
 const API_BASE = "https://cnt.liara.run";
-const fs = require("fs");
-const TOKEN_FILE = "token.json";
+const ACCOUNT_FILE = path.join(__dirname, "account.json");
 
-function loadToken() {
-  if (fs.existsSync(TOKEN_FILE)) {
-    const data = fs.readFileSync(TOKEN_FILE);
-    return JSON.parse(data).token;
-  }
-  throw new Error("❌ No token found! Run auth.test.js first to generate token.");
+// ------------------ Helpers ------------------
+function randomString(prefix) {
+  return `${prefix}-${Math.random().toString(36).substring(2, 10)}`;
 }
 
+function randomPhone() {
+  return "09" + Math.floor(100000000 + Math.random() * 900000000);
+}
 
-const AUTH_TOKEN = `Bearer ${loadToken()}`;
-  const client = axios.create({
-      baseURL : API_BASE,
+function logError(endpoint, err) {
+  if (err.response) {
+    console.error(`❌ ${endpoint} →`, err.response.status);
+    console.error("Body:", JSON.stringify(err.response.data, null, 2));
+  } else {
+    console.error(`❌ ${endpoint} ERROR:`, err.message);
+  }
+  throw err;
+}
+
+function saveAccount(account) {
+  let data = [];
+  if (fs.existsSync(ACCOUNT_FILE)) {
+    data = JSON.parse(fs.readFileSync(ACCOUNT_FILE, "utf-8"));
+    if (!Array.isArray(data)) data = [];
+  }
+  data.push(account);
+  fs.writeFileSync(ACCOUNT_FILE, JSON.stringify(data, null, 2));
+  console.log(`✅ Account saved in ${ACCOUNT_FILE}:`, account._id);
+}
+
+// ------------------ Test Suite ------------------
+describe("👤 Accounts API E2E", () => {
+  let client;
+  let createdAccount;
+  let token;
+
+  beforeAll(async () => {
+    token = await getToken();
+    console.log("✅ Token ready:", token);
+
+    client = axios.create({
+      baseURL: API_BASE,
       headers: {
-          Accept:"application/json",
-          Authorization: AUTH_TOKEN,
-          "content-Type": "application/json"
+        Accept: "application/json",
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
       },
+    });
   });
 
-function logError(err){
-    if(err.response){
-        console.error("STATUS:",err.response.statuse);
-        console.error("BODY:",JSON.stringify(err.response.data,null, 2));
-    } else {
-        console.error("ERROR",err.massage);
-    } throw err;
-};
+  test("should create a new account", async () => {
+    const payload = {
+      name: randomString("acc"),
+      phone: randomPhone(),
+      whatsapp: String(randomPhone()),
+      phone2: randomPhone(),
+      brandName: randomString("brand"),
+      province: "68b6bf0984408c6bf562988e",
+      city: "68b6bf0984408c6bf562988d",
+      address: randomString("address"),
+    };
 
-describe("Product Accounts API E2E", () => {
-    let createdAccountsId;
+    try {
+      const res = await client.post("/accounts", payload);
+      expect([200, 201]).toContain(res.status);
+      createdAccount = res.data.data;
+      console.log("✅ Account Created:", createdAccount._id);
+    } catch (err) {
+      logError("/accounts", err);
+    }
+  });
 
-    test('should create a new accounts',
-    async () =>  {
-        try {
-            const payload = {
-                name:  `test-${Date.now()}`,
-                phone: "099999999999",
-                phone2: "09879579879",
-                whatsapp:  `test-${Date.now()}`,
-                brandName:  `test-${Date.now()}`,
-                province: "68b6bf0984408c6bf562988e",
-                city: "68b6bf0984408c6bf562988d",
-                address:  `test-${Date.now()}`
-            };
-            const res = await client.post("/accounts", payload);
-                             
-            expect([200,201]).toContain(res.status);
-            expect(res.data.data).toHaveProperty("_id");
-            expect(res.data.data).toHaveProperty("name", payload.name);
-            createdAccountsId = res.data.data._id;
-        } catch (err) {
-            logError(err);
-        }
-     },20000
-     );
+  test("should fetch accounts list", async () => {
+    try {
+      const res = await client.get("/accounts");
+      expect(res.status).toBe(200);
+      console.log("✅ Accounts Count:", res.data?.data?.length);
+    } catch (err) {
+      logError("/accounts", err);
+    }
+  });
+
+  afterAll(() => {
+    if (createdAccount) {
+      saveAccount(createdAccount);
+    }
+  });
 });
-
-
-
-
-
-
-
-

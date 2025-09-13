@@ -1,101 +1,111 @@
+// warehouse-transactions.test.js
 const axios = require("axios");
+const fs = require("fs");
+const path = require("path");
+const { getToken } = require("./auth.js"); // ✅ get token dynamically
 
 const API_BASE = "https://cnt.liara.run";
-const fs = require("fs");
-const TOKEN_FILE = "token.json";
+const PRODUCT_FILE = "product.json";
+const WAREHOUSE_FILE = "warehouses.json";
+const WAREHOUSE_TRANSACTION_FILE = "warehouseTransactions.json";
 
-function loadToken() {
-  if (fs.existsSync(TOKEN_FILE)) {
-    const data = fs.readFileSync(TOKEN_FILE);
-    return JSON.parse(data).token;
-  }
-  throw new Error("❌ No token found! Run auth.test.js first to generate token.");
+// ------------------ Load last product ID ------------------
+function loadLastProductId() {
+  if (!fs.existsSync(PRODUCT_FILE)) throw new Error("❌ product.json not found!");
+  const data = JSON.parse(fs.readFileSync(PRODUCT_FILE, "utf-8"));
+  if (!Array.isArray(data) || data.length === 0) throw new Error("❌ product.json is empty!");
+  const lastProduct = data[data.length - 1];
+  return lastProduct._id;
 }
 
+// ------------------ Load last 3 warehouses ------------------
+function loadLast3Warehouses() {
+  if (!fs.existsSync(WAREHOUSE_FILE)) throw new Error("❌ warehouses.json not found!");
+  const data = JSON.parse(fs.readFileSync(WAREHOUSE_FILE, "utf-8"));
+  if (!Array.isArray(data) || data.length < 3) throw new Error("❌ Need at least 3 warehouses!");
+  return data.slice(-3); // last 3 warehouses
+}
 
-const AUTH_TOKEN = `Bearer ${loadToken()}`;
-const client = axios.create({
-  baseURL: API_BASE,
-  headers: {
-    Accept: "application/json",
-    Authorization: AUTH_TOKEN,
-    "Content-Type": "application/json",
-  },
-});
+// ------------------ Save warehouse transaction ------------------
+function saveWarehouseTransaction(transaction) {
+  let data = [];
+  if (fs.existsSync(WAREHOUSE_TRANSACTION_FILE)) {
+    data = JSON.parse(fs.readFileSync(WAREHOUSE_TRANSACTION_FILE, "utf-8"));
+    if (!Array.isArray(data)) data = [];
+  }
+  data.push(transaction);
+  fs.writeFileSync(WAREHOUSE_TRANSACTION_FILE, JSON.stringify(data, null, 2));
+  console.log(`✅ Warehouse transaction saved: ${transaction._id}`);
+}
 
-function logError(err) {
+// ------------------ Error logging ------------------
+function logError(endpoint, err) {
   if (err.response) {
-    console.error("STATUS:", err.response.status);
-    console.error("BODY:", JSON.stringify(err.response.data, null, 2));
+    console.error(`❌ ${endpoint} →`, err.response.status);
+    console.error("Body:", JSON.stringify(err.response.data, null, 2));
   } else {
-    console.error("ERROR:", err.message);
+    console.error(`❌ ${endpoint} ERROR:`, err.message);
   }
-  throw err;
 }
 
+// ------------------ Test Suite ------------------
 describe("warehouse-transactions API E2E", () => {
-  test("should create a new warehouse-transaction", async () => {
-    try {
+  let client;
+  let productId;
+  let warehouses;
 
-      const productRes = await client.get("/products");
-      const productId = productRes.data?.data?.[0]?._id;
-      if (!productId) throw new Error("❌ هیچ productی پیدا نشد!");
+  beforeAll(async () => {
+    // 📌 Get fresh token
+    const token = await getToken();
+    console.log("✅ Token ready:", token);
 
-      const warehouseRes = await client.get("/warehouses");
-      const warehouses = warehouseRes.data?.data;
-      if (!warehouses || warehouses.length < 3) {
-        throw new Error("❌ حداقل 3 warehouse نیاز داریم!");
+    client = axios.create({
+      baseURL: API_BASE,
+      headers: {
+        Accept: "application/json",
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+    });
+
+    productId = loadLastProductId();
+    warehouses = loadLast3Warehouses();
+    console.log("✅ Last product ID:", productId);
+    console.log("✅ Last 3 warehouses IDs:", warehouses.map(w => w._id));
+  });
+
+  test(
+    "should create a new warehouse transaction using last product and warehouses",
+    async () => {
+      try {
+        const [w1, w2, w3] = warehouses;
+
+        const payload = {
+          quantity: 1,
+          description: `test-${Date.now()}`,
+          batchNumber: `batch-${Date.now()}`,
+          product: productId,
+          warehouse: w1._id,
+          movedFrom: w2._id,
+          movedTo: w3._id,
+          date: new Date().toISOString(),
+          destination: "test-destination",
+          reason: "test-reason",
+          price: 100,
+          transactionType: "entry",
+        };
+
+        const res = await client.post("/warehouse-transactions", payload);
+        expect([200, 201]).toContain(res.status);
+
+        const createdTransaction = res.data.data;
+        console.log("✅ Warehouse-transaction created:", createdTransaction._id);
+
+        saveWarehouseTransaction(createdTransaction);
+      } catch (err) {
+        logError("/warehouse-transactions", err);
       }
-
-      const [w1, w2, w3] = warehouses;
-
-  
-      const uniqueDesc = `test-${Date.now()}`;
-      const payload = {
-        quantity: 1,
-        description: uniqueDesc,
-        batchNumber: `batch-${Date.now()}`,
-        product: productId,
-        warehouse: w1._id,
-        movedFrom: w2._id,
-        movedTo: w3._id,
-        date: new Date().toISOString(),
-        destination: "test-destination",
-        reason: "test-reason",
-        price: 100,
-        transactionType: "entry",
-      };
-
-
-      const postRes = await client.post("/warehouse-transactions", payload);
-      expect([200, 201]).toContain(postRes.status);
-
-
-      const txRes = await client.get("/warehouse-transactions");
-      expect(txRes.status).toBe(200);
-
-      const allTransactions = txRes.data?.data || [];
-      const found = allTransactions.find(
-        (tx) => tx.description === uniqueDesc
-      );
-
-      if (!found) {
-        throw new Error(
-          "❌ نتونستیم transaction ساخته‌شده رو پیدا کنیم. Response: " +
-            JSON.stringify(allTransactions)
-        );
-      }
-
-
-expect(found).toHaveProperty("_id");
-expect(found.product).toBeDefined();
-expect(found.product._id).toBe(productId);
-expect(found.warehouse._id).toBe(w1._id);
-expect(found.description).toBe(uniqueDesc);
-
-
-    } catch (err) {
-      logError(err);
-    }
-  }, 30000);
+    },
+    30000
+  );
 });

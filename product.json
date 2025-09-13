@@ -1,0 +1,1334 @@
+[
+  {
+    "name": "test-1757678338873",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c3d86084408c6bf5637aea",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c40b0384408c6bf563afd7",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-12T11:58:59.588Z",
+    "updatedAt": "2025-09-12T11:58:59.588Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757678400566",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c3d86084408c6bf5637aea",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c40b4084408c6bf563b0b2",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-12T12:00:00.982Z",
+    "updatedAt": "2025-09-12T12:00:00.982Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757678582082",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c3d86084408c6bf5637aea",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c40bf684408c6bf563b1a1",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-12T12:03:02.690Z",
+    "updatedAt": "2025-09-12T12:03:02.690Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757678828174",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c3d86084408c6bf5637aea",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c40cec84408c6bf563b223",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-12T12:07:08.613Z",
+    "updatedAt": "2025-09-12T12:07:08.613Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757679028377",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c3d86084408c6bf5637aea",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c40db484408c6bf563b37b",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-12T12:10:28.843Z",
+    "updatedAt": "2025-09-12T12:10:28.843Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757679238998",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c3d86084408c6bf5637aea",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c40e8784408c6bf563b468",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-12T12:13:59.436Z",
+    "updatedAt": "2025-09-12T12:13:59.436Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757679509639",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c3d86084408c6bf5637aea",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c40f9684408c6bf563b565",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-12T12:18:30.094Z",
+    "updatedAt": "2025-09-12T12:18:30.094Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757679755165",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c3d86084408c6bf5637aea",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c4108b84408c6bf563b66b",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-12T12:22:35.533Z",
+    "updatedAt": "2025-09-12T12:22:35.533Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757679972547",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c3d86084408c6bf5637aea",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c4116484408c6bf563b750",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-12T12:26:12.996Z",
+    "updatedAt": "2025-09-12T12:26:12.996Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757680004786",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c3d86084408c6bf5637aea",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c4118584408c6bf563b811",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-12T12:26:45.224Z",
+    "updatedAt": "2025-09-12T12:26:45.224Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757680336738",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c3d86084408c6bf5637aea",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c412d184408c6bf563b94a",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-12T12:32:17.294Z",
+    "updatedAt": "2025-09-12T12:32:17.294Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757680377794",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c3d86084408c6bf5637aea",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c412fa84408c6bf563ba03",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-12T12:32:58.199Z",
+    "updatedAt": "2025-09-12T12:32:58.199Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757681041213",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c3d86084408c6bf5637aea",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c4159184408c6bf563bb27",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-12T12:44:01.780Z",
+    "updatedAt": "2025-09-12T12:44:01.780Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757792342589",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c5bdd484408c6bf563bb87",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c5c85784408c6bf563bd10",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-13T19:39:03.978Z",
+    "updatedAt": "2025-09-13T19:39:03.978Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757792523607",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c5bdd484408c6bf563bb87",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c5c90d84408c6bf563bd36",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-13T19:42:05.491Z",
+    "updatedAt": "2025-09-13T19:42:05.491Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757792646477",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c5bdd484408c6bf563bb87",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c5c98884408c6bf563bdbd",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-13T19:44:08.093Z",
+    "updatedAt": "2025-09-13T19:44:08.093Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757792755634",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c5bdd484408c6bf563bb87",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c5c9f584408c6bf563bec7",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-13T19:45:57.202Z",
+    "updatedAt": "2025-09-13T19:45:57.202Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757792985464",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c5bdd484408c6bf563bb87",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c5cadb84408c6bf563bffb",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-13T19:49:47.191Z",
+    "updatedAt": "2025-09-13T19:49:47.191Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757793137345",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c5bdd484408c6bf563bb87",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c5cb7284408c6bf563c101",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-13T19:52:18.716Z",
+    "updatedAt": "2025-09-13T19:52:18.716Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757793408714",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c5bdd484408c6bf563bb87",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c5cc8284408c6bf563c244",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-13T19:56:50.289Z",
+    "updatedAt": "2025-09-13T19:56:50.289Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757793439257",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c5bdd484408c6bf563bb87",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c5cca084408c6bf563c32f",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-13T19:57:20.701Z",
+    "updatedAt": "2025-09-13T19:57:20.701Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757793668123",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c5bdd484408c6bf563bb87",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c5cd8584408c6bf563c485",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-13T20:01:09.780Z",
+    "updatedAt": "2025-09-13T20:01:09.780Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757793871358",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c5bdd484408c6bf563bb87",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c5ce5184408c6bf563c557",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-13T20:04:33.088Z",
+    "updatedAt": "2025-09-13T20:04:33.088Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757793884210",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c5bdd484408c6bf563bb87",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c5ce5d84408c6bf563c642",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-13T20:04:45.611Z",
+    "updatedAt": "2025-09-13T20:04:45.611Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757793920493",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c5bdd484408c6bf563bb87",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c5ce8184408c6bf563c777",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-13T20:05:21.897Z",
+    "updatedAt": "2025-09-13T20:05:21.897Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757793938975",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c5bdd484408c6bf563bb87",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c5ce9484408c6bf563c8bf",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-13T20:05:40.389Z",
+    "updatedAt": "2025-09-13T20:05:40.389Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757794102303",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c5bdd484408c6bf563bb87",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c5cf3784408c6bf563c9dd",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-13T20:08:23.707Z",
+    "updatedAt": "2025-09-13T20:08:23.707Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757794189520",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c5bdd484408c6bf563bb87",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c5cf8f84408c6bf563caf2",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-13T20:09:51.104Z",
+    "updatedAt": "2025-09-13T20:09:51.104Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757794506454",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c5bdd484408c6bf563bb87",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c5d0cc84408c6bf563cc24",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-13T20:15:08.027Z",
+    "updatedAt": "2025-09-13T20:15:08.027Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757794726925",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c5bdd484408c6bf563bb87",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c5d1a884408c6bf563cd20",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-13T20:18:48.497Z",
+    "updatedAt": "2025-09-13T20:18:48.497Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757794869362",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c5bdd484408c6bf563bb87",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c5d23684408c6bf563ce20",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-13T20:21:10.820Z",
+    "updatedAt": "2025-09-13T20:21:10.820Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757794994421",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c5bdd484408c6bf563bb87",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c5d2b384408c6bf563cf8e",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-13T20:23:15.890Z",
+    "updatedAt": "2025-09-13T20:23:15.890Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757795059260",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c5bdd484408c6bf563bb87",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c5d2f484408c6bf563d082",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-13T20:24:20.997Z",
+    "updatedAt": "2025-09-13T20:24:20.997Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757795196356",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c5bdd484408c6bf563bb87",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c5d37d84408c6bf563d198",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-13T20:26:37.891Z",
+    "updatedAt": "2025-09-13T20:26:37.891Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757795383253",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c5bdd484408c6bf563bb87",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c5d43984408c6bf563d2d6",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-13T20:29:45.992Z",
+    "updatedAt": "2025-09-13T20:29:45.992Z",
+    "__v": 0
+  },
+  {
+    "name": "test-1757795572593",
+    "description": "test product",
+    "pricePerCurrency": [
+      {
+        "currencyDetails": {
+          "purchasePriceCurrency": "USD",
+          "purchaseCurrencyRateToBase": 1,
+          "baseCurrency": "USD",
+          "purchasePriceFormula": "10",
+          "sell1PriceFormula": "15",
+          "sell2PriceFormula": "20"
+        },
+        "extraCost": 0,
+        "purchasePrice": 100,
+        "sellPrice1": 120,
+        "sellPrice2": 130,
+        "sellPrice3": 140,
+        "isDefault": true,
+        "jewelryMakingCharges": 0,
+        "jewelryTax": 0
+      }
+    ],
+    "totalProductQuantity": 0,
+    "unit": "30",
+    "tenant": "68c5bdd484408c6bf563bb87",
+    "productGroups": [],
+    "isJewelry": false,
+    "_id": "68c5d4f684408c6bf563d395",
+    "images": [],
+    "warehouseEntries": [],
+    "warehouseDepartures": [],
+    "secondaryUnits": [],
+    "createdAt": "2025-09-13T20:32:54.493Z",
+    "updatedAt": "2025-09-13T20:32:54.493Z",
+    "__v": 0
+  }
+]
