@@ -11,7 +11,7 @@ let client;
 beforeAll(async () => {
   // 📌 Always get fresh token from auth.test.js
   token = await getToken();
-  console.log("✅ Token ready:", token);
+  // console.log("✅ Token ready:", token);
 
   client = axios.create({
     baseURL: API_BASE,
@@ -26,10 +26,10 @@ beforeAll(async () => {
 // ------------------ Error logging ------------------
 function logError(endpoint, err) {
   if (err.response) {
-    console.error(`❌ ${endpoint} →`, err.response.status);
-    console.error("Body:", JSON.stringify(err.response.data, null, 2));
+  //   console.error(`❌ ${endpoint} →`, err.response.status);
+  //   console.error("Body:", JSON.stringify(err.response.data, null, 2));
   } else {
-    console.error(`❌ ${endpoint} ERROR:`, err.message);
+    // console.error(`❌ ${endpoint} ERROR:`, err.message);
   }
   throw err;
 }
@@ -94,7 +94,7 @@ describe("Tenants API E2E", () => {
         expect(res.data.data).toHaveProperty("address", payload.address);
 
         createdTenantId = res.data.data._id;
-        console.log("✅ Tenant Created:", createdTenantId);
+        // console.log("✅ Tenant Created:", createdTenantId);
       } catch (err) {
         logError("/tenants", err);
       }

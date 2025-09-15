@@ -20,10 +20,10 @@ function randomMessage() {
 
 function logError(err) {
   if (err.response) {
-    console.error("STATUS:", err.response.status);
-    console.error("BODY:", JSON.stringify(err.response.data, null, 2));
+    // console.error("STATUS:", err.response.status);
+    // console.error("BODY:", JSON.stringify(err.response.data, null, 2));
   } else {
-    console.error("ERROR:", err.message);
+    // console.error("ERROR:", err.message);
   }
   throw err;
 }
@@ -53,11 +53,11 @@ describe("Notifications API E2E", () => {
       try {
         const payload = { message: randomMessage(), mobile: randomPhone() };
 
-        console.log("📤 Sending Notification Payload:", payload);
+        // console.log("📤 Sending Notification Payload:", payload);
 
         const res = await client.post("/notification", payload);
 
-        console.log("📩 Notification API Response:", res.data);
+        // console.log("📩 Notification API Response:", res.data);
 
         expect([200, 201]).toContain(res.status);
         expect(res.data.data).toHaveProperty("message", "Sended");

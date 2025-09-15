@@ -11,7 +11,7 @@ let token;
 // ------------------ Before all tests ------------------
 beforeAll(async () => {
   token = await getToken();
-  console.log("✅ Token ready for ProductGroups tests:", token);
+  // console.log("✅ Token ready for ProductGroups tests:", token);
 });
 
 // ------------------ Helper: create product group ------------------
@@ -36,7 +36,7 @@ async function createProductGroup(token) {
   expect(res.data.data).toHaveProperty("_id");
   expect(res.data.data).toHaveProperty("name", payload.name);
 
-  console.log("✅ ProductGroup created:", res.data.data._id);
+  // console.log("✅ ProductGroup created:", res.data.data._id);
   return res.data.data._id;
 }
 

@@ -46,7 +46,7 @@ function saveProduct(product) {
   }
   data.push(product);
   fs.writeFileSync(PRODUCT_FILE, JSON.stringify(data, null, 2));
-  console.log(`✅ Product saved in ${PRODUCT_FILE}:`, product._id);
+  // console.log(`✅ Product saved in ${PRODUCT_FILE}:`, product._id);
 }
 
 // ------------------ Test Suite ------------------
@@ -109,7 +109,7 @@ describe("Products API E2E", () => {
         createdProduct = res.data.data;
         saveProduct(createdProduct);
 
-        console.log("✅ Product created:", createdProduct._id);
+        // console.log("✅ Product created:", createdProduct._id);
       } catch (err) {
         logError(err);
       }

@@ -9,8 +9,8 @@ let client;
 
 function logError(err) {
   if (err.response) {
-    console.error("STATUS:", err.response.status);
-    console.error("BODY:", JSON.stringify(err.response.data, null, 2));
+    // console.error("STATUS:", err.response.status);
+    // console.error("BODY:", JSON.stringify(err.response.data, null, 2));
   } else {
     console.error("ERROR:", err.message);
   }
@@ -49,7 +49,7 @@ describe("Default Notification API E2E", () => {
 
         const res = await client.post("/notification", payload);
         expect([200, 201]).toContain(res.status);
-        console.log("✅ Notification sent successfully");
+        // console.log("✅ Notification sent successfully");
       } catch (err) {
         logError(err);
       }

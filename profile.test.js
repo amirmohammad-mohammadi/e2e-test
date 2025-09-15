@@ -25,10 +25,10 @@ beforeAll(async () => {
 // ------------------ Helper ------------------
 function logError(endpoint, err) {
   if (err.response) {
-    console.error(`❌ ${endpoint} →`, err.response.status);
-    console.error("Body:", JSON.stringify(err.response.data, null, 2));
+    // console.error(`❌ ${endpoint} →`, err.response.status);
+    // console.error("Body:", JSON.stringify(err.response.data, null, 2));
   } else {
-    console.error(`❌ ${endpoint} ERROR:`, err.message);
+    // console.error(`❌ ${endpoint} ERROR:`, err.message);
   }
   throw err;
 }
@@ -40,7 +40,7 @@ describe("Example API E2E", () => {
       const res = await client.get("/tenants"); // مسیر واقعی API
       expect([200, 201]).toContain(res.status);
       expect(Array.isArray(res.data.data)).toBe(true);
-      console.log("✅ Response (first 3):", res.data.data.slice(0, 3));
+      // console.log("✅ Response (first 3):", res.data.data.slice(0, 3));
     } catch (err) {
       logError("/tenants", err);
     }
@@ -51,7 +51,7 @@ describe("Example API E2E", () => {
       const res = await client.get("/tags");
       expect([200, 201]).toContain(res.status);
       expect(Array.isArray(res.data.data)).toBe(true);
-      console.log("✅ Tags (first 3):", res.data.data.slice(0, 3));
+      // console.log("✅ Tags (first 3):", res.data.data.slice(0, 3));
     } catch (err) {
       logError("/tags", err);
     }

@@ -12,7 +12,7 @@ let client;
 // ------------------ Before all tests ------------------
 beforeAll(async () => {
   token = await getToken();
-  console.log("✅ Token ready:", token);
+  // console.log("✅ Token ready:", token);
 
   client = axios.create({
     baseURL: API_BASE,
@@ -44,7 +44,7 @@ function saveWarehouse(warehouse) {
   }
   data.push(warehouse);
   fs.writeFileSync(WAREHOUSE_FILE, JSON.stringify(data, null, 2));
-  console.log(`✅ Warehouse saved in ${WAREHOUSE_FILE}:`, warehouse._id);
+  // console.log(`✅ Warehouse saved in ${WAREHOUSE_FILE}:`, warehouse._id);
 }
 
 // ------------------ Create a new warehouse ------------------

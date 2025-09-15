@@ -12,7 +12,7 @@ let client;
 beforeAll(async () => {
   // 📌 Always get fresh token from auth.test.js
   token = await getToken();
-  console.log("✅ Token ready:", token);
+  // console.log("✅ Token ready:", token);
 
   client = axios.create({
     baseURL: API_BASE,
@@ -33,15 +33,15 @@ function saveTag(tag) {
   }
   data.push(tag);
   fs.writeFileSync(TAG_FILE, JSON.stringify(data, null, 2));
-  console.log(`✅ Tag saved in ${TAG_FILE}:`, tag._id);
+  // console.log(`✅ Tag saved in ${TAG_FILE}:`, tag._id);
 }
 
 function logError(endpoint, err) {
   if (err.response) {
-    console.error(`❌ ${endpoint} →`, err.response.status);
-    console.error("Body:", JSON.stringify(err.response.data, null, 2));
+    // console.error(`❌ ${endpoint} →`, err.response.status);
+    // console.error("Body:", JSON.stringify(err.response.data, null, 2));
   } else {
-    console.error(`❌ ${endpoint} ERROR:`, err.message);
+    // console.error(`❌ ${endpoint} ERROR:`, err.message);
   }
   throw err;
 }
@@ -74,7 +74,7 @@ describe("Tags API E2E", () => {
       expect([200, 201]).toContain(res.status);
       expect(Array.isArray(res.data.data)).toBe(true);
 
-      console.log("📋 Tags list (first 3):", res.data.data.slice(0, 3));
+      // console.log("📋 Tags list (first 3):", res.data.data.slice(0, 3));
     } catch (err) {
       logError("/tags", err);
     }
