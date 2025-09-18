@@ -1,8 +1,6 @@
-// units.test.js (real E2E)
 const axios = require("axios");
 const { getToken } = require("../auth/auth.js");
 
-console.log(getToken()); 
 
 const API_BASE = "https://cnt.liara.run";
 

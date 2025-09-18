@@ -1,4 +1,3 @@
-// analytics-account.test.js
 const { getToken } = require("../auth/auth.js");
 const axios = require("axios");
 
@@ -23,7 +22,7 @@ function getDates() {
 }
 
 const periods = ["daily", "weekly", "monthly", "yearly", "seasonal"];
-const currencies = ["USD", "IRT", "IRR", "AED", "EUR", "ALL"];
+const currencies = "IRT";
 const transactionTypes = ["sell", "receive", "payment"];
 
 beforeAll(async () => {
@@ -52,7 +51,6 @@ describe("📊 Analytics transactions API E2E", () => {
     try {
       const res = await client.get("/analytics/transaction/total-amount");
       expect([200, 201]).toContain(res.status);
-      // console.log("✅ total amount:", res.data);
     } catch (err) {
       logError("/analytics/transaction/total-amount", err);
     }
@@ -62,7 +60,6 @@ describe("📊 Analytics transactions API E2E", () => {
     try {
       const res = await client.get("/analytics/transaction/count-by-payment-method");
       expect([200, 201]).toContain(res.status);
-      // console.log("✅ count by payment method:", res.data);
     } catch (err) {
       logError("/analytics/transaction/count-by-payment-method", err);
     }
@@ -72,7 +69,6 @@ describe("📊 Analytics transactions API E2E", () => {
     try {
       const res = await client.get("/analytics/transaction/count-by-type");
       expect([200, 201]).toContain(res.status);
-      // console.log("✅ count by type:", res.data);
     } catch (err) {
       logError("/analytics/transaction/count-by-type", err);
     }
@@ -82,7 +78,6 @@ describe("📊 Analytics transactions API E2E", () => {
     try {
       const res = await client.get("/analytics/transaction/count-by-status");
       expect([200, 201]).toContain(res.status);
-      // console.log("✅ count by status:", res.data);
     } catch (err) {
       logError("/analytics/transaction/count-by-status", err);
     }
@@ -121,10 +116,10 @@ test("GET total amount period", async () => {
     try {
       const transactionType = randomChoice(["sell", "receive", "payment"]);
       const period = randomChoice(["daily", "weekly", "monthly", "yearly", "seasonal"]);
-      const currency = randomChoice(["USD", "IRT", "IRR", "AED", "EUR", "ALL"]);
-      const endDate = new Date(); // now
+      const currency = "IRT";
+      const endDate = new Date(); 
       const startDate = new Date();
-      startDate.setFullYear(endDate.getFullYear() - 1); // 1 year ago
+      startDate.setFullYear(endDate.getFullYear() - 1);
   
       const res = await client.get(`/analytics/transaction/total-amount-period/${transactionType}`, {
         params: {

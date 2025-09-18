@@ -113,7 +113,7 @@ describe("Transactions API E2E", () => {
     "❌ should fail with invalid status",
     async () => {
       try {
-        await createTransaction({ status: "xxx" }); // invalid status
+        await createTransaction({ status: "invalid" }); 
       } catch (err) {
         expect(err.response.status).toBe(400);
       }

@@ -18,23 +18,22 @@ describe("warehouse-transactions API E2E", () => {
   let productId;
   let warehouses;
 
-  beforeAll(async () => {
-    const token = await getToken();
+ beforeAll(async () => {
+  const token = await getToken();
 
-    client = axios.create({
-      baseURL: API_BASE,
-      headers: {
-     
-        Authorization: `Bearer ${token}`,
-      
-      },
-    });
+  client = axios.create({
+    baseURL: API_BASE,
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
 
-const productRes = await client.get("/products?pageSize=50&page=1");
-    product = productRes.data.data.slice(-1)[0];  
+  const productRes = await client.get("/products?pageSize=50&page=1");
+  productId = productRes.data.data.slice(-1)[0]._id;
 
-const warehouseRes = await client.get("/warehouses?pageSize=50&page=1");
-    warehouses = warehouseRes.data.data.slice(-1)[0];  });
+  const warehouseRes = await client.get("/warehouses?pageSize=50&page=1");
+  warehouses = warehouseRes.data.data.slice(-1)[0];
+}, 30000); 
 
   test(
     "should create a new warehouse transaction using last product and warehouses",

@@ -1,4 +1,3 @@
-// products.test.js
 const { getToken } = require("../auth/auth.js");
 const axios = require("axios");
 const fs = require("fs");
@@ -54,9 +53,9 @@ describe("Products API E2E", () => {
           pricePerCurrency: [
             {
               currencyDetails: {
-                purchasePriceCurrency: "USD",
+                purchasePriceCurrency: "IRT",
                 purchaseCurrencyRateToBase: 1,
-                baseCurrency: "USD",
+                baseCurrency: "IRT",
                 purchasePriceFormula: "10",
                 sell1PriceFormula: "15",
                 sell2PriceFormula: "20",

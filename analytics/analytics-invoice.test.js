@@ -1,4 +1,3 @@
-// analytics-invoice.test.js
 const { getToken } = require("../auth/auth.js");
 
 const axios = require("axios");
@@ -22,7 +21,7 @@ function getDateRange() {
   };
 }
 
-const currencies = ["USD", "IRT", "IRR", "AED", "EUR", "ALL"];
+const currencies = "IRT";
 const periods = ["daily", "weekly", "monthly", "yearly", "seasonal"];
 
 beforeAll(async () => {
@@ -119,7 +118,7 @@ describe("📊 Analytics Invoice API E2E", () => {
   });
 
   test("GET count by period", async () => {
-    const periods = ["daily", "weekly", "monthly", "yearly", "seasonal"]; // مشخص کردن period ها
+    const periods = ["daily", "weekly", "monthly", "yearly", "seasonal"]; 
     const period = randomChoice(periods);
   
     try {

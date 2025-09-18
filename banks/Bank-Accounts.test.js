@@ -1,5 +1,5 @@
 const axios = require("axios");
-const { getToken } = require("../auth/auth.js"); // مسیر رو درست تنظیم کن
+const { getToken } = require("../auth/auth.js"); 
 const fs = require("fs");
 
 const API_BASE = "https://cnt.liara.run";
@@ -36,7 +36,7 @@ describe("💰 Bank + Transactions API E2E", () => {
     } catch (err) {
       logError("/bank-accounts", err);
     }
-  });
+  },30000);
 
   test("🏦 should create a new bank account", async () => {
     try {

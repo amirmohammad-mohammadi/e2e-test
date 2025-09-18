@@ -8,9 +8,7 @@ let client;
 
 function logError(err) {
   if (err.response) {
-    console.error("API error:", err.response.data || err.response.status);
   } else {
-    console.error("Network/other error:", err.message);
   }
   throw err;
 }
@@ -29,7 +27,6 @@ async function createWarehouse(client) {
     expect([200, 201]).toContain(res.status);
 
     const warehouse = res.data.data;
-    console.log("✅ Warehouse created:", warehouse);
     return warehouse._id;
   } catch (err) {
     logError(err);

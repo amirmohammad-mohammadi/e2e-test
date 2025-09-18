@@ -15,7 +15,7 @@ function logError(endpoint, err) {
 
 describe("📦 Categories API E2E", () => {
   let categoryId;
-  let lastBankAccountId;
+  // let lastBankAccountId;
 
   beforeAll(async () => {
     try {

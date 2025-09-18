@@ -1,4 +1,3 @@
-// analytics-account.test.js
 const { getToken } = require("../auth/auth.js");
 const axios = require("axios");
 
@@ -85,7 +84,6 @@ describe("📊 Analytics API E2E", () => {
         params: { limit },
       });
       expect([200, 201]).toContain(res.status);
-      console.log("✅ Top Client by Revenue (limit:", limit, "):", res.data);
     } catch (err) {
       logError("/analytics/account/top-client-by-revenue", err);
     }

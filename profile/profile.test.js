@@ -1,4 +1,3 @@
-// example.test.js
 const { getToken } = require("../auth/auth.js");
 const axios = require("axios");
 

@@ -1,4 +1,3 @@
-// 1.productGroups.test.js
 const { getToken } = require("../auth/auth.js");
 const axios = require("axios");
 const fs = require("fs");
